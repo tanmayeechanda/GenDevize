@@ -1,4 +1,4 @@
-# QRTrack Pro 🔐📍
+# GenDevize 🔐📍
 
 A secure QR Code Management, Assignment, and Tracking Platform built using the MERN Stack. The system enables administrators to generate unique QR codes, assign them to users, track scan activity and locations, and manage the complete QR lifecycle through a role-based access control system.
 
@@ -8,7 +8,7 @@ Designed for organizations requiring secure asset tracking, user verification, a
 
 ## 🚀 Overview
 
-QRTrack Pro provides a centralized platform for generating, assigning, monitoring, and managing QR codes across multiple user roles.
+GenDevize provides a centralized platform for generating, assigning, monitoring, and managing QR codes across multiple user roles.
 
 The application follows a hierarchical administrative model:
 
@@ -249,8 +249,8 @@ Stores:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/qrtrack-pro.git
-cd qrtrack-pro
+git clone https://github.com/tanmayeechanda/GenDevize.git
+
 ```
 
 ---
@@ -279,8 +279,7 @@ Create a `.env` file inside the server directory.
 ```env
 PORT=5000
 
-MONGO_URI=your_mongodb_connection_string
-
+MONGO_URI=mongodb+srv://tanmayee:tanmayee123@no-of-devices.ewrtxil.mongodb.net/?appName=No-of-Devices
 JWT_SECRET=your_secret_key
 ```
 
@@ -290,15 +289,15 @@ JWT_SECRET=your_secret_key
 
 ```bash
 cd server
-node server.js
+npm run server
 ```
 
 ---
 
-### Start Frontend
+### Start Frontend client
 
 ```bash
-npm run dev
+npm run client
 ```
 
 ---
@@ -314,8 +313,7 @@ http://localhost:5173
 ## 📸 Screenshots
 
 ### Landing Page
-
-Add screenshot here
+![alt text](image.png)
 
 ### Super Admin Dashboard
 
