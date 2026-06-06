@@ -31,10 +31,10 @@ const SuperAdminDashboard = () => {
       const token = localStorage.getItem("token");
 
       const [adminsRes, devicesRes] = await Promise.all([
-        fetch("http://localhost:5000/api/admin/admins", {
+        fetch("/api/admin/admins", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch("http://localhost:5000/api/devices", {
+        fetch("/api/devices", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -61,13 +61,10 @@ const SuperAdminDashboard = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(
-        `http://localhost:5000/api/devices/${deviceId}`,
-        {
-          method: "DELETE",
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const response = await fetch(`/api/devices/${deviceId}`, {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
       if (response.ok) {
         setDevices(devices.filter((device) => device._id !== deviceId));

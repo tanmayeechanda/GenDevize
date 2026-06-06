@@ -22,17 +22,14 @@ const NormalAdminDashboard = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(
-        "http://localhost:5000/api/devices/generate",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({ numberOfDevices: parseInt(numberOfDevices) }),
-        }
-      );
+      const response = await fetch("/api/devices/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ numberOfDevices: parseInt(numberOfDevices) }),
+      });
 
       const data = await response.json();
 

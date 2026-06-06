@@ -8,17 +8,13 @@ export const authenticateToken = (req, res, next) => {
     return res.status(401).json({ message: "Access token required" });
   }
 
-  jwt.verify(
-    token,
-    process.env.JWT_SECRET || "fallback_secret",
-    (err, user) => {
-      if (err) {
-        return res.status(403).json({ message: "Invalid token" });
-      }
-      req.user = user;
-      next();
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    if (err) {
+      return res.status(403).json({ message: "Invalid token" });
     }
-  );
+    req.user = user;
+    next();
+  });
 };
 
 export const requireRole = (roles) => {
