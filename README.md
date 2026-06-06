@@ -146,6 +146,13 @@ This provides complete visibility into QR code usage across the system.
 * MongoDB Atlas
 * Mongoose ODM
 
+### Development Tools
+
+- Concurrently
+- Nodemon
+- Vite
+- ESLint
+
 ### Additional Libraries
 
 * QR Code Generator
@@ -296,6 +303,32 @@ VITE_OPENCAGE_API_KEY=your_opencage_api_key
 
 ```bash
 cd server
+npm run server
+```
+### Start Development Server
+
+Run both the frontend and backend simultaneously using:
+
+```bash
+npm run dev
+```
+
+This command uses **concurrently** to start:
+
+* Frontend (Vite) on `http://localhost:5173`
+* Backend (Express.js) on `http://localhost:5000`
+
+### Individual Commands (Optional)
+
+Start only the frontend:
+
+```bash
+npm run client
+```
+
+Start only the backend:
+
+```bash
 npm run server
 ```
 
