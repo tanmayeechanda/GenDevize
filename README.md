@@ -4,7 +4,11 @@ A secure QR Code Management, Assignment, and Tracking Platform built using the M
 
 Designed for organizations requiring secure asset tracking, user verification, and centralized administrative oversight.
 
----
+🌐 Live Demo
+
+Application: https://gen-devize.vercel.app
+
+Experience the live application with role-based dashboards, QR code generation, assignment, tracking, and location-based verification.
 
 ## 🚀 Overview
 
@@ -248,10 +252,13 @@ Stores:
 
 ### Clone Repository
 
-```bash
-git clone https://github.com/tanmayeechanda/GenDevize.git
+## 🔗 Repository
 
-```
+GitHub: https://github.com/tanmayeechanda/GenDevize
+
+## 🌐 Live Demo
+
+Application: https://gen-devize.vercel.app
 
 ---
 
@@ -278,9 +285,9 @@ Create a `.env` file inside the server directory.
 
 ```env
 PORT=5000
-
-MONGO_URI=mongodb+srv://tanmayee:tanmayee123@no-of-devices.ewrtxil.mongodb.net/?appName=No-of-Devices
-JWT_SECRET=your_secret_key
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+VITE_OPENCAGE_API_KEY=your_opencage_api_key
 ```
 
 ---
@@ -339,7 +346,19 @@ http://localhost:5173
 * Attendance Monitoring Systems
 * Access Control Platforms
 
----
+## 🚀 Deployment
+
+The application is deployed on Vercel and MongoDB Atlas.
+
+### Live URL
+
+https://gen-devize.vercel.app
+
+### Technologies Used in Deployment
+
+- Vercel (Frontend + Backend Hosting)
+- MongoDB Atlas (Database)
+- GitHub (Version Control & CI/CD)
 
 ## 🚧 Future Enhancements
 
